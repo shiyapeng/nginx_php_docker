@@ -14,7 +14,7 @@ services:
         restart: always
 
 
-    phptest:
+    php:
         build:
             context: .
             dockerfile: ./php7.1-fpm/Dockerfile
