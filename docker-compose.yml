@@ -20,3 +20,4 @@ services:
             dockerfile: ./php7.1-fpm/Dockerfile
         volumes:
             - ./nginx/wwwroot:/var/wwwroot
+        restart: always
