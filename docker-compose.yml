@@ -10,7 +10,7 @@ services:
         ports:
             - "8081:80"
         links:
-            - phptest
+            - php
         restart: always
 
 
