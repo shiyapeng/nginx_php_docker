@@ -1,6 +1,7 @@
 version: '2'
 services:
     nginx:
+        container_name: nginx_ct
         image: nginx
         volumes:
             - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
@@ -15,6 +16,8 @@ services:
 
 
     php:
+        container_name: php_ct
+        image: php_img
         build:
             context: .
             dockerfile: ./php7.1-fpm/Dockerfile
