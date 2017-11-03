@@ -10,6 +10,8 @@ services:
             - ./nginx/logs:/var/log/nginx
         ports:
             - "80:80"
+        depends_on:
+            - php
         links:
             - php
         restart: always
@@ -24,3 +26,10 @@ services:
         volumes:
             - ./nginx/wwwroot:/var/wwwroot
         restart: always
+####已有php镜像
+#    php:
+#       container_name: php_ct
+#       image: yxy_php
+#       volumes:
+#           - ./nginx/wwwroot:/var/wwwroot:ro
+#       restart: always
