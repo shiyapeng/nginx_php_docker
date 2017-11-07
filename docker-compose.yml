@@ -31,5 +31,5 @@ services:
 #       container_name: php_ct
 #       image: yxy_php
 #       volumes:
-#           - ./nginx/wwwroot:/var/wwwroot:ro
+#           - ./nginx/wwwroot:/var/wwwroot
 #       restart: always
