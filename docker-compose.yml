@@ -8,6 +8,8 @@ services:
             - ./nginx/conf/conf.d:/etc/nginx/conf.d:ro
             - ./nginx/wwwroot:/var/wwwroot:ro
             - ./nginx/logs:/var/log/nginx
+        environment:   
+            - TZ=Asia/Shanghai
         ports:
             - "80:80"
         depends_on:
@@ -25,6 +27,8 @@ services:
             dockerfile: ./php7.1-fpm/Dockerfile
         volumes:
             - ./nginx/wwwroot:/var/wwwroot
+        environment:   
+            - TZ=Asia/Shanghai
         restart: always
 ####已有php镜像
 #    php:
